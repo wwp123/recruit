@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>招聘-测评题目</title>
+    <link rel="Shortcut Icon" href="http://www.yihu.com/images/favicon.ico" />
+    <link rel="stylesheet" href="http://f1.yihuimg.com/concat/cross_pc/1.1.1/cross/css/cross.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://f1.yihuimg.com/concat/cross_pc/1.1.1/cross/css/cross.ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="../css/manage.css" type="text/css" />
+</head>
+<body>
+<div class="header">
+	<div class="wcenter">
+		<a href="招聘-首页.html" class="fl">
+			<img src="../images/logo.png" alt="" class="mt10" />
+		</a>
+		<div class="fr">
+			<ul>
+				<li>
+					<a href="招聘-个人中心.html" class="active">个人中心</a>
+				</li>
+				<li>
+					<a href="#">登录</a>
+				</li>
+				<li>
+					<a href="javascript:;" id="registerBtn">注册</a>
+				</li>
+				<li>
+					<a href="#">意见建议</a>
+				</li>
+				<li>
+					<a href="javascript:;" id="weixinShow">关注微信
+						<div class="code">
+							<img src="../images/code.png" alt="" />
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="main clearfix mt20 mb40">
+	<div class="wcenter">
+		<div class="cpquestion-section">
+			<p class="c-f14">1、我满脑子创业，并有所行动。我满脑子创业，并有所行动。我满脑子创业，并有所行动。我满脑子创业，并有所行动。</p>
+            <div class="mt20">
+                <label class="radio checked" data-toggle="radio">
+                    <input type="radio" checked="checked" class="c-hide" name="group1">
+                    <i class="icon-radio"></i>完全符合
+                </label>
+                <label class="radio radio-check ml30" data-toggle="radio">
+                    <input type="radio" class="c-hide" name="group1">
+                    <i class="icon-radio"></i>基本符合
+                </label>
+                <label class="radio radio-check ml30" data-toggle="radio">
+                    <input type="radio" class="c-hide" name="group1">
+                    <i class="icon-radio"></i>完全不是
+                </label>
+            </div>
+			<div class="c-t-center mt50">
+				<a href="javascript:;" class="c-btn c-btn-ff8600 next-btn">提交</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="wcenter clearfix">
+		<div class="fl mt25">
+			<img src="../images/logo-fff.png" alt="" />
+			<div class="copyright">Copyright ©健康之路 专业就诊服务机构 版权所有 B2-20110196(全网) 闽B2-20090074 闽ICP</div>
+		</div>
+		<div class="fr pt15">
+			<div class="link">
+				<a href="javascript:;" class="weixin ml10">
+					<div class="code">
+						<img src="../images/code.png" alt="" />
+					</div>
+				</a>
+				<a href="javascript:;" class="app ml10">
+					<div class="code">
+						<img src="../images/code.png" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="phone">
+				全国服务热线  <span>400-6677-400</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!--注册弹窗-->
+<div id="registerPop" class="register-pop" style="display: none;">
+	<div class="plr20 c-border-b">
+		<div class="input-phone">
+			<i class="icon"></i>
+			<input type="text" class="input-text" placeholder="请输入手机号码" />
+		</div>
+		<div class="input-img-code">
+			<i class="icon"></i>
+			<input type="text" class="input-text" placeholder="请输入验证码" />
+			<a href="javascript:;" class="">
+				<img src="../images/img-code.png" alt="" />
+			</a>
+		</div>
+		<div class="input-code">
+			<i class="icon"></i>
+			<input type="text" class="input-text" placeholder="请输入验证码" />
+			<a href="javascript:;" class="getCode">获取验证码</a>
+		</div>
+	</div>
+	<div class="mb30 plr20">
+		<div class="c-f00 c-f14 mt15">验证码错误，请重新输入</div>
+		<a href="#" class="c-btn c-btn-ff8600 c-btn-full mt15">注册</a>
+	</div>
+</div>
+<script type="text/javascript" src="http://f1.yihuimg.com/concat/cross_pc/1.1.1/cross/js/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://f1.yihuimg.com/concat/cross_pc/1.1.1/cross/js/cross.ui.js"></script>
+<script type="text/javascript" src="../widget/placeholder/2.0.7/js/jquery.placeholder.js"></script>
+<link rel="stylesheet" href="../widget/artDialog/4.1.7/css/artDialog.css" type="text/css" />
+<script type="text/javascript" src="../widget/artDialog/4.1.7/js/artDialog.js"></script>
+<script>
+	$(function(){
+		//头部关注微信
+		$('#weixinShow').hover(function(){
+			$(this).toggleClass('active');
+			if($(this).hasClass('active')){
+				$(this).find('.code').stop(true,true).fadeIn();
+			}else{
+				$(this).find('.code').stop(true,false).fadeOut();
+			}
+		});
+		//底部微信、app
+		$('.link a').hover(function(){
+			$(this).toggleClass('active');
+			if($(this).hasClass('active')){
+				$(this).find('.code').stop(true,true).fadeIn();
+			}else{
+				$(this).find('.code').stop(true,false).fadeOut();
+			}
+		});
+		//注册弹窗
+		$('#registerBtn').on('click', function() {
+			var loginDialog = art.dialog({
+				lock: true,
+				artIcon: '',
+				opacity: 0.4,
+				width: 350,
+				padding: "0",
+				title: '<div class="register-tit">新用户绑定或注册</div>',
+				content: $('#registerPop').get(0),
+				ok: null,
+				cancel: null
+			});
+		});
+		//主体最小高度
+		var h = $(window).height() - $('.header').outerHeight(true) - $('.footer').outerHeight(true) - 100;
+		$('.cpquestion-section').css('min-height',h);
+		//提交弹窗
+		$('.next-btn').click(function(){
+			var loginDialog = art.dialog({
+				lock: true,
+				artIcon: '',
+				opacity: 0.4,
+				width: 480,
+				padding: "0",
+				title: '',
+				content: '<div class="c-t-center c-333 ptb30"><p class="c-f18">确认提交？ </p></div>',
+				ok: function(){
+					art.dialog({
+						lock: true,
+						artIcon: '',
+						opacity: 0.4,
+						width: 480,
+						padding: "0",
+						title: '',
+						content: '<div class="c-t-center c-333 ptb30 c-f18"><p>提交成功，测评完成</p><p>本次测评用时：5分23秒</p></div>',
+						ok: function(){},
+						okVal:'我知道啦',
+					});
+					$('.aui_title').remove();
+				},
+				okVal:'确认',
+				cancel: true
+			});
+			$('.aui_title').remove();
+		});
+	});
+</script>
+</body>
+</html>
